@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jupyter:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes: 
+      - C:\Users\an.tarasov\Desktop\test_docker:/home/jovyan
+    ports:
+      - 8888:8888
+  db: 
+    image: postgres
+    restart: always
+    ports: 
+      - 5431:5432
+    
